@@ -14,13 +14,7 @@ const cafeOrders = {
   bieres: 10,
   vins: 11,
   salades: 20,
-  bruschette: 21,
-  pates: 22,
-  viande: 23,
-  panini: 24,
-  croques: 25,
-  hotdog: 26,
-  bagels: 27,
+  bagels: 21,
 };
 
 const compare = (a, b) => {

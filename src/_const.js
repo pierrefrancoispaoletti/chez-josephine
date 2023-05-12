@@ -11,3 +11,5 @@ export const colors = {
 };
 
 export const phoneNumber = "0836656565";
+
+export const GOOGLE_API_KEY = "AIzaSyCXqBKgfwkkW1urDlW0_GBNaS79P1ZjU0E";

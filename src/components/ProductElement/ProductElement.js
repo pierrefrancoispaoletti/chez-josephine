@@ -4,6 +4,7 @@ import { TableauContent } from "../TableauHomePage/tableau-homepage.style";
 import { selectCurrentUser } from "../../redux/reducers/User/selector";
 import { useSelector } from "react-redux";
 import WineElement from "../WineElement/WineElement";
+import TranslatorComponent from "../TranslatorComponent/TranslatorComponent";
 
 const ProductElement = ({ product, index, length }) => {
   const { _id, price, description, title, visible, category, couleur } =
@@ -36,7 +37,13 @@ const ProductElement = ({ product, index, length }) => {
             )
         )}
       </WineColorContainer> */}
-      <p className="description">{description}</p>
+      <p className="description">
+        {description.length > 0 && (
+          <TranslatorComponent>
+            {description.replace("\n", " ")}
+          </TranslatorComponent>
+        )}
+      </p>
     </TableauContent>
   );
 };
