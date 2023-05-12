@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3813f9b8.chunk.css",
+    "main.js": "/static/js/main.90120807.chunk.js",
+    "main.js.map": "/static/js/main.90120807.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ed69b625.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ed69b625.js.map",
+    "static/js/2.d2deb0a5.chunk.js": "/static/js/2.d2deb0a5.chunk.js",
+    "static/js/2.d2deb0a5.chunk.js.map": "/static/js/2.d2deb0a5.chunk.js.map",
+    "static/js/3.14385b19.chunk.js": "/static/js/3.14385b19.chunk.js",
+    "static/js/3.14385b19.chunk.js.map": "/static/js/3.14385b19.chunk.js.map",
+    "static/js/4.fa9b7f64.chunk.js": "/static/js/4.fa9b7f64.chunk.js",
+    "static/js/4.fa9b7f64.chunk.js.map": "/static/js/4.fa9b7f64.chunk.js.map",
+    "index.html": "/index.html",
+    "service-worker.js": "/service-worker.js",
+    "service-worker.js.LICENSE.txt": "/service-worker.js.LICENSE.txt",
+    "service-worker.js.map": "/service-worker.js.map",
+    "static/css/main.3813f9b8.chunk.css.map": "/static/css/main.3813f9b8.chunk.css.map",
+    "static/js/2.d2deb0a5.chunk.js.LICENSE.txt": "/static/js/2.d2deb0a5.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/crayonhand.f8408bf7.ttf",
+    "static/media/damman.e51c3790.png": "/static/media/damman.e51c3790.png",
+    "static/media/domori-logo2.a9acefb3.png": "/static/media/domori-logo2.a9acefb3.png",
+    "static/media/domori.8a45a947.jpg": "/static/media/domori.8a45a947.jpg",
+    "static/media/logo.png": "/static/media/logo.6e398497.png",
+    "static/media/texte-chez-josephine.01f44922.png": "/static/media/texte-chez-josephine.01f44922.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed69b625.js",
+    "static/js/2.d2deb0a5.chunk.js",
+    "static/css/main.3813f9b8.chunk.css",
+    "static/js/main.90120807.chunk.js"
+  ]
+}
