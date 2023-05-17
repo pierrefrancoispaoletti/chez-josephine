@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chez-josephine/static/css/main.9ca1a2ab.css",
-    "main.js": "/chez-josephine/static/js/main.2e2e0e3e.js",
+    "main.css": "/chez-josephine/static/css/main.948b75f8.css",
+    "main.js": "/chez-josephine/static/js/main.af19d204.js",
     "static/js/59.346a5faf.chunk.js": "/chez-josephine/static/js/59.346a5faf.chunk.js",
     "static/js/553.b578ded9.chunk.js": "/chez-josephine/static/js/553.b578ded9.chunk.js",
     "static/media/crayonhand.ttf": "/chez-josephine/static/media/crayonhand.f8408bf787fcd295193a.ttf",
@@ -12,13 +12,13 @@
     "service-worker.js": "/chez-josephine/service-worker.js",
     "static/media/texte-chez-josephine.png": "/chez-josephine/static/media/texte-chez-josephine.01f449220b66d9a1fee5.png",
     "index.html": "/chez-josephine/index.html",
-    "main.9ca1a2ab.css.map": "/chez-josephine/static/css/main.9ca1a2ab.css.map",
-    "main.2e2e0e3e.js.map": "/chez-josephine/static/js/main.2e2e0e3e.js.map",
+    "main.948b75f8.css.map": "/chez-josephine/static/css/main.948b75f8.css.map",
+    "main.af19d204.js.map": "/chez-josephine/static/js/main.af19d204.js.map",
     "59.346a5faf.chunk.js.map": "/chez-josephine/static/js/59.346a5faf.chunk.js.map",
     "553.b578ded9.chunk.js.map": "/chez-josephine/static/js/553.b578ded9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ca1a2ab.css",
-    "static/js/main.2e2e0e3e.js"
+    "static/css/main.948b75f8.css",
+    "static/js/main.af19d204.js"
   ]
 }
