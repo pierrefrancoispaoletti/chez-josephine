@@ -5,6 +5,8 @@ import Loginbutton from "../LoginButton/LoginButton";
 import { HeaderContainer, HeaderTitle } from "./header.style";
 import logo from "../../assets/images/logo.png";
 import texte from "../../assets/images/texte-chez-josephine.png";
+import { OrderBannerContainer } from "../OrderNumberBanner/order-number-banner.style";
+import OrderNumberBanner from "../OrderNumberBanner/OrderNumberBanner";
 
 const Header = ({ shop }) => {
   return (
@@ -12,13 +14,6 @@ const Header = ({ shop }) => {
       <Link to="/">
         <ImageElement width="80px" image={logo} alt={"logo chez josephine"} />
       </Link>
-      <HeaderTitle>
-        <ImageElement
-          width="200px"
-          image={texte}
-          alt={"texte chez josephine"}
-        />
-      </HeaderTitle>
       <Loginbutton />
     </HeaderContainer>
   );

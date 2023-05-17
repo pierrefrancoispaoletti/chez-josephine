@@ -10,8 +10,6 @@ const ProductElement = ({ product, index, length }) => {
   const { _id, price, description, title, visible, category, couleur } =
     product;
   const user = useSelector(selectCurrentUser);
-
-  console.log(category);
   return (
     <TableauContent
       visible={user?.role === "isAdmin" || visible}

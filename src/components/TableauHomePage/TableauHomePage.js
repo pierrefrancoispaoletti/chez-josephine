@@ -35,14 +35,14 @@ const TableauHomePage = ({ setFilter, children, filter }) => {
         transition={prevlocationValue !== location.pathname}
         transitionType=""
       >
-        <TableauTitle>{findCategory?.name}</TableauTitle>
-        {findCategory?.logo && (
+        <TableauTitle>{findCategory?.title ?? findCategory?.name}</TableauTitle>
+        {/* {findCategory?.logo && (
           <img
             width={findCategory?.width}
             src={findCategory?.logo}
             alt={findCategory?.alt}
           />
-        )}
+        )} */}
         <TableauLegend>{findCategory?.legend}</TableauLegend>
         {findCategory?.subCategory && (
           <SubCategorySelector

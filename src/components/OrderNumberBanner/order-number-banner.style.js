@@ -2,13 +2,19 @@ import styled from "styled-components";
 import { colors } from "../../_const";
 
 export const OrderBannerContainer = styled.div`
-  position: ${(props) => (props.top ? "relative" : "fixed")};
+  /* position: ${(props) => (props.top ? "relative" : "fixed")}; */
   width: 100%;
-  height: 60px;
+  color: ${colors.ecriture};
+  font-size: 1.5em;
+  margin-bottom: 12px;
+  font-spacing: 1.2;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Lora";
+
   & button {
     display: flex;
     flex-direction: column;

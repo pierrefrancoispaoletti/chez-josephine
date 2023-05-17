@@ -18,7 +18,7 @@ const cafeOrders = {
 };
 
 const compare = (a, b) => {
-  return a < b ? -1 : 1;
+  return a > b ? 1 : -1;
 };
 const selectProducts = (state) => state.products;
 
@@ -45,8 +45,8 @@ export const selectProductsBySubCategory = (filter, category) =>
         )
       : products.sort((a, b) => {
           let index_result = compare(
-            cafeOrders[a?.subCategory],
-            cafeOrders[b?.subCategory]
+            cafeOrders[b?.price],
+            cafeOrders[a?.price]
           );
           return index_result;
         })

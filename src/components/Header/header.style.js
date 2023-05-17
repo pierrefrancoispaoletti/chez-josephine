@@ -3,13 +3,12 @@ import { colors } from "../../_const";
 
 export const HeaderContainer = styled.header`
   position: relative;
-  margin: 0 0 12px;
-  padding: 12px 12px 36px 12px;
   display: flex;
   justify-content: center;
+  background: transparent;
   /* border-bottom: 3px solid black; */
-  border-radius: 0 0 50px 50px;
-  background: linear-gradient(
+  /* border-radius: 0 0 50px 50px; */
+  /* background: linear-gradient(
     to right,
     ${colors.tertiary},
     ${colors.secondary}
@@ -26,7 +25,7 @@ export const HeaderContainer = styled.header`
     100% {
       background-position: 92% 0%;
     }
-  }
+  } */
   /* box-shadow: 0px 9px 23px -5px rgba(0, 0, 0, 0.58); */
 `;
 

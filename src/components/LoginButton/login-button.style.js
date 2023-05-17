@@ -4,7 +4,7 @@ import { colors } from "../../_const";
 
 export const LoginButtonStyled = styled(Link)`
   position: absolute;
-  top: 15px;
+  top: 0px;
   right: 15px;
   border: 4px solid ${colors.main};
   padding: 10px 12px;

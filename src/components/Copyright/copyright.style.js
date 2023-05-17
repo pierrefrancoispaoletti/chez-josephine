@@ -12,24 +12,24 @@ export const CopyrightStyled = styled.div`
     align-items: center;
     margin: auto;
     padding: 10px;
-    font-family: "crayonHand", sans-serif !important;
+    font-family: "Lora", sans-serif !important;
     font-size: 1.3em;
-    color: ${colors.secondary}!important;
+    color: ${colors.ecriture}!important;
   }
 
   .footer__alvp {
     border-radius: 8px;
     padding: 2px 5px;
-    font-family: "crayonHand", sans-serif !important;
-    color: ${colors.secondary}!important;
+    font-family: "Lora", sans-serif !important;
+    color: ${colors.ecriture}!important;
   }
 
   h3 {
-    font-family: "crayonHand", cursive !important;
+    font-family: "Lora", cursive !important;
     text-align: center !important;
     letter-spacing: 0.2em;
     font-size: 1.8em !important;
-    color: ${colors.secondary} !important;
+    color: ${colors.ecriture} !important;
   }
 
   .alvp__icon {
@@ -37,7 +37,7 @@ export const CopyrightStyled = styled.div`
   }
 
   .link {
-    color: ${colors.secondary};
+    color: ${colors.ecriture};
   }
 
   @keyframes heartPulse {

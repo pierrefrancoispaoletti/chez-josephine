@@ -3,11 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 import "./copyright.style.js";
-import {
-  faEnvelope,
-  faHeart,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { facebook, instagram, phoneNumber, url } from "../../_const";
 import { CopyrightStyled } from "./copyright.style.js";
 const Copyright = () => {
@@ -20,8 +16,8 @@ const Copyright = () => {
         <a target="_blank" href={facebook} rel="noreferrer">
           <FontAwesomeIcon
             style={{
-              color: "#3B5998",
-              background: "white",
+              color: "black",
+              background: "transparent",
               borderRadius: "100%",
             }}
             size="3x"
@@ -31,7 +27,7 @@ const Copyright = () => {
         </a>
         <a target="_blank" href={instagram} rel="noreferrer">
           <FontAwesomeIcon
-            style={{ color: "#3F729B", borderRadius: "100%" }}
+            style={{ color: "black", borderRadius: "100%" }}
             size="3x"
             icon={faInstagram}
             pull="right"
@@ -42,24 +38,23 @@ const Copyright = () => {
         <h3>Contactez nous ! </h3>
       </div>
       <div className="footer__icons">
-        <a href={`mailto:christophemartinetti@baravin1755.com`}>
+        {/* <a href={`mailto:${mail}`}>
           <FontAwesomeIcon
             style={{
-              color: "#3B5998",
+              color: "black",
             }}
             size="3x"
             icon={faEnvelope}
             pull="left"
           />
-        </a>
+        </a> */}
         <a href={phoneNumber}>
           <FontAwesomeIcon
             style={{
-              color: "#3F729B",
+              color: "black",
             }}
             size="3x"
             icon={faPhone}
-            pull="right"
           />
         </a>
       </div>

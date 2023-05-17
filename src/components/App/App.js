@@ -8,6 +8,8 @@ import Loader from "../Loader/Loader";
 import LocalMessage from "../LocalMessage/LocalMessage";
 import OrderNumberBanner from "../OrderNumberBanner/OrderNumberBanner";
 import Copyright from "../Copyright";
+import background from "../../assets/images/background.png";
+
 const Login = lazy(() => import("../../pages/Login/Login"));
 const ProductsPage = lazy(() =>
   import("../../pages/ProductsPage/ProductsPage")
@@ -17,9 +19,18 @@ const App = () => {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div style={{ margin: "0 0 25px 0" }}>
+    <div
+      style={{
+        margin: "0 0 25px 0",
+        // backgroundImage: `url(${background})`,
+        // backgroundSize: "100%",
+        // backgroundRepeat: "no-repeat",
+        // backgroundPositionX: "100%",
+        // backgroundAttachment: "fixed",
+      }}
+    >
       <Header />
-      <OrderNumberBanner top />
+      {/* <OrderNumberBanner /> */}
       <LocalMessage />
       <CategorySelector />
       <Suspense fallback={<Loader />}>

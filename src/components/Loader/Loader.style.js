@@ -10,8 +10,8 @@ export const LoaderContainer = styled.div`
   letter-spacing: 8px;
   span {
     font-size: 2.5em;
-    color: ${colors.main};
-    font-family: "ChalkAbout";
+    color: ${colors.ecriture};
+    font-family: "Lora";
     :nth-child(n) {
       animation: evenCharacterAnimation 0.7s linear infinite;
     }

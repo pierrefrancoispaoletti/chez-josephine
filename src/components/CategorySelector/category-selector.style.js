@@ -16,16 +16,17 @@ export const ListContainer = styled.ul`
   list-style: none;
 `;
 export const CategoryItem = styled.li`
+  font-family: "Lora";
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   margin: 0px 8px;
-  background: ${colors.main};
-  border: 1px solid ${colors.secondary};
-  border-radius: 12px;
+  background: ${colors.secondary};
+  border: 1px solid ${colors.ecriture};
+  border-radius: 100%;
   padding: 6px;
   box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.58);
   transition: all 0.5s;
@@ -45,9 +46,9 @@ export const CategoryTitle = styled.span`
 
 export const LinkContainer = styled(NavLink)`
   text-decoration: none;
-  color: ${colors.secondary};
+  color: ${colors.main};
   &.active {
-    text-decoration: underline ${colors.main};
+    /* text-decoration: underline ${colors.main}; */
     & > li {
       background: ${colors.secondary};
       border: 3px solid ${colors.main};

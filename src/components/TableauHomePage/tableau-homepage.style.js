@@ -1,18 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { css } from "styled-components";
-import { colors } from "../../_const";
+import { allowedCategories, colors } from "../../_const";
 
 const isStyle2 = (props) => {
   if (props.style2) {
     return css`
       div:not(.modal) {
-        background: ${colors.tertiary};
+        background: ${hexToRGB(colors.background)};
         position: relative;
         color: ${colors.ecriture};
-        font-family: unset;
+        font-family: "Lora";
         .subcategory {
           color: ${colors.ecriture};
-          font-family: unset;
+          font-family: "Lora";
         }
         .chevron {
           color: ${colors.secondary};
@@ -35,25 +35,26 @@ const isStyle2 = (props) => {
         }
         & > .title {
           color: ${colors.ecriture};
-          font-family: unset;
-          font-weight: 300;
+          font-family: "Lora";
+          font-weight: "bold";
           font-size: 1.2rem;
           margin: 12px auto;
           & > .price {
             color: ${colors.ecriture};
-            font-family: unset;
+            font-family: "Lora";
+            font-weight: "bold";
             ${"" /* border-bottom: 1px solid ${colors.secondary}; */}
             font-size: 1rem;
-            font-style: italic;
           }
         }
         & > .description {
           text-align: center;
           font-weight: 300;
-          text-transform: unset;
+          text-transform: "Lora";
           @media (min-width: 420px) {
             text-align: left;
           }
+          margin-bottom: 36px;
         }
         & > .menu {
           color: ${colors.ecriture};
@@ -65,6 +66,10 @@ const isStyle2 = (props) => {
         & > .selected {
           background: ${colors.secondary};
           color: ${colors.main};
+        }
+        & > .wine-color {
+          font-size: 1.5em;
+          ${getWineColor}
         }
       }
       h2 {
@@ -95,15 +100,12 @@ const isLastInHome = (props) => {
       }
     `;
   }
-  if (
-    !props.last &&
-    (props.category === "today" || props.category === "le-vin")
-  ) {
+  if (!props.last && allowedCategories.includes(props.category)) {
     return css`
       .description {
         margin-bottom: 12px !important;
         padding-bottom: 12px;
-        border-bottom: 5px solid ${colors.main};
+        border-bottom: 5px solid ${colors.secondary};
         width: 100%;
       }
     `;
@@ -194,20 +196,30 @@ const getWineColor = (props) => {
   }
 };
 
+const hexToRGB = (hex) => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? `rgba(${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(
+        result[3],
+        16
+      )}, 0.6)`
+    : null;
+};
+
 export const TableauContainer = styled.div`
   border: ${(props) =>
     props.style2 ? `14px solid ${colors.secondary}` : "14px solid #deb887"};
   margin: 0px 8px;
   box-shadow: 0px 9px 23px -5px rgba(0, 0, 0, 0.58);
   perspective: 1500px;
-  background: #484b56;
+  background: transparent;
   .subcategory {
     margin: 12px auto 0 auto;
     text-align: center;
     display: block;
     font-size: 2.2em;
     color: ${colors.main};
-    font-family: "crayonHand";
+    font-family: "Lora";
     text-transform: uppercase;
     font-weight: 200;
     border-top: 1px solid ${colors.primary};
@@ -231,14 +243,14 @@ export const TableauWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #484b56;
+  background-color: ${hexToRGB("#484b56")};
   min-height: 80vh;
   ${getTransitionType}
 `;
 
 export const TableauTitle = styled.h2`
   position: relative;
-  font-family: "crayonHand";
+  font-family: "Lora";
   font-size: 2.6em;
   margin-bottom: 12px;
   color: ${colors.main};
@@ -251,15 +263,16 @@ export const TableauTitle = styled.h2`
 `;
 
 export const TableauLegend = styled.p`
+  font-size: 1.5em;
   margin: 8px 12px;
   text-align: center;
   line-height: 1.6;
-  color: ${colors.secondary};
+  color: ${colors.ecriture};
 `;
 
 export const TableauContent = styled.div`
   position: relative;
-  font-family: "crayonHand";
+  font-family: "Lora";
   display: flex;
   width: 80%;
   flex-direction: column;
@@ -287,6 +300,7 @@ export const TableauContent = styled.div`
     text-transform: uppercase;
     font-size: 1.5rem;
     margin: 12px auto;
+    font-weight: bold;
     & > span {
       max-width: 65%;
       text-align: left;
@@ -303,8 +317,8 @@ export const TableauContent = styled.div`
   }
 
   .price {
-    font-family: "ChalkAboutItalic";
-    font-weight: 400;
+    font-family: "Lora";
+    font-weight: "bold";
     /* :not(.wineprice) {
       border-bottom: 1px solid ${colors.main};
     } */
@@ -315,9 +329,9 @@ export const TableauContent = styled.div`
   }
 
   .description {
-    font-family: "Montserrat, sans";
+    font-family: "Lora";
     letter-spacing: 1.5px;
-    text-align: center;
+    text-align: left;
     margin: 0;
     font-size: 1.3rem;
     white-space: pre-wrap;
@@ -341,6 +355,7 @@ export const WinePriceContainer = styled.div`
   text-align: right;
   justify-content: center;
   vertical-align: baseline;
+  ${getWineColor};
 `;
 
 export const WinePriceElement = styled.span`
@@ -379,7 +394,7 @@ export const SubCategoryFilterContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   color: ${colors.main};
-  font-family: "crayonHand";
+  font-family: "Lora";
   font-size: 1em;
   transition: all 0.5s ease;
   margin: 8px auto;

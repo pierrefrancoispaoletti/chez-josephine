@@ -1,26 +1,44 @@
+import { faWineBottle, faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logoBagel from "../../assets/images/bagel.png";
+import logoSalade from "../../assets/images/salade.png";
+import logoVin from "../../assets/images/vin.png";
+import logoBoissons from "../../assets/images/boissons.png";
 const logoSmall = "20px";
 export const categories = [
   {
-    name: "Suggestions",
-    // icon: <FontAwesomeIcon icon={faHatChef} size="2x" />,
+    name: "Today's",
+    // icon: <FontAwesomeIcon icon={faHashtag} size="2x" />,
     link: "/",
     slug: "today",
   },
   {
-    name: "La Carte",
+    name: "Salad's",
+    title: "Les salades du potager",
+    logo: logoSalade,
+
+    // icon: <FontAwesomeIcon icon={faHashtag} size="2x" />,
+    link: "/products/salades",
+    slug: "salades",
+  },
+  {
+    name: "Bagels",
+    title: "Nos Bagels",
+    logo: logoBagel,
+    legend: "Tous nos pains sont artisanaux",
     // icon: <FontAwesomeIcon icon="bagel" size="2x" />,
-    link: "/products/la-carte",
-    slug: "la-carte",
-    subCategory: [
-      { name: "Salades", slug: "salades" },
-      { name: "Bagels", slug: "bagels" },
-      // { name: "Pates", slug: "pates" },
-      // {
-      //   name: "Viandes & Burgers",
-      //   slug: "viande",
-      //   legend: "Accompagnements: Frites maison ou Pommes de terre au four",
-      // },
-    ],
+    link: "/products/bagels",
+    slug: "bagels",
+    // subCategory: [
+    //   { name: "Salades", slug: "salades" },
+    //   { name: "Bagels", slug: "bagels" },
+    // { name: "Pates", slug: "pates" },
+    // {
+    //   name: "Viandes & Burgers",
+    //   slug: "viande",
+    //   legend: "Accompagnements: Frites maison ou Pommes de terre au four",
+    // },
+    // ],
   },
   // {
   //   name: "Vitrine Salée",
@@ -42,21 +60,36 @@ export const categories = [
   // },
   {
     name: "Boissons Fraiches",
-    // icon: <FontAwesomeIcon icon={faGlass} size="2x" />,
+    logo: logoBoissons,
+    // icon: <FontAwesomeIcon icon={fa} size="2x" />,
     link: "/products/le-froid",
     slug: "le-froid",
     subCategory: [
       { name: "Eaux", slug: "eaux" },
       { name: "Softs", slug: "softs" },
+      { name: "Bières", slug: "bieres" },
       // { name: "Fruits Frais Préssés", slug: "fruits-frais" },
       // { name: "Granita", slug: "granita" },
       // { name: "Vins", slug: "vins" },
-      { name: "Bières", slug: "bieres" },
     ],
   },
   {
-    name: "Le Vin",
-    // icon: <FontAwesomeIcon icon={faWineBottle} size="2x" />,
+    name: "Boissons Chaudes",
+    icon: <FontAwesomeIcon icon={faCoffee} size="1x" />,
+    link: "/products/le-chaud",
+    slug: "le-chaud",
+    // subCategory: [
+    //   { name: "Eaux", slug: "eaux" },
+    //   { name: "Softs", slug: "softs" },
+    //   { name: "Bières", slug: "bieres" },
+    //   // { name: "Fruits Frais Préssés", slug: "fruits-frais" },
+    //   // { name: "Granita", slug: "granita" },
+    //   // { name: "Vins", slug: "vins" },
+    // ],
+  },
+  {
+    name: "La Cave",
+    logo: logoVin,
     link: "/products/le-vin",
     slug: "le-vin",
   },
