@@ -2,23 +2,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { css } from "styled-components";
 import { colors } from "../../_const";
 
-const isIlly = (props) => {
-  if (props.illy) {
+const isStyle2 = (props) => {
+  if (props.style2) {
     return css`
       div:not(.modal) {
-        background: ${colors.main};
+        background: ${colors.tertiary};
         position: relative;
-        color: black;
+        color: ${colors.black};
         font-family: unset;
         .subcategory {
-          color: ${colors.secondary};
+          color: ${colors.black};
           font-family: unset;
         }
         .chevron {
           color: ${colors.secondary};
           border: 1px solid ${colors.secondary};
-          animation: scalingChevronIlly 1.5s infinite linear alternate;
-          @keyframes scalingChevronIlly {
+          animation: scalingChevronJosephine 1.5s infinite linear alternate;
+          @keyframes scalingChevronJosephine {
             0% {
               background: inherit;
               transform: scale(1);
@@ -34,13 +34,13 @@ const isIlly = (props) => {
           color: ${colors.secondary};
         }
         & > .title {
-          color: ${colors.secondary};
+          color: ${colors.black};
           font-family: unset;
           font-weight: 300;
           font-size: 1.2rem;
           margin: 12px auto;
           & > .price {
-            color: black;
+            color: ${colors.black};
             font-family: unset;
             ${"" /* border-bottom: 1px solid ${colors.secondary}; */}
             font-size: 1rem;
@@ -175,7 +175,7 @@ const getWineColor = (props) => {
 
 export const TableauContainer = styled.div`
   border: ${(props) =>
-    props.illy ? `14px solid ${colors.secondary}` : "14px solid #deb887"};
+    props.style2 ? `14px solid ${colors.secondary}` : "14px solid #deb887"};
   margin: 0px 8px;
   box-shadow: 0px 9px 23px -5px rgba(0, 0, 0, 0.58);
   perspective: 1500px;
@@ -203,7 +203,7 @@ export const TableauContainer = styled.div`
       padding-top: 8px;
     }
   }
-  ${isIlly}
+  ${isStyle2}
 `;
 
 export const TableauWrapper = styled.div`

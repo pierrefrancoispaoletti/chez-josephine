@@ -12,6 +12,7 @@ import ProductModal from "../ProductModal/ProductModal";
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "../../redux/reducers/User/selector";
 import SubCategorySelector from "../SubCategorySelector/SubCategorySelector";
+import { categoriesStyle2 } from "../../_const";
 
 const TableauHomePage = ({ setFilter, children, filter }) => {
   const location = useLocation();
@@ -28,16 +29,7 @@ const TableauHomePage = ({ setFilter, children, filter }) => {
   return (
     <TableauContainer
       className="tableau-homepage"
-      illy={
-        findCategory?.slug === "le-cafe" ||
-        findCategory?.slug === "le-chocolat" ||
-        findCategory?.slug === "le-the" ||
-        findCategory?.slug === "la-vitrine-salee" ||
-        findCategory?.slug === "la-vitrine-sucree" ||
-        findCategory?.slug === "fruits-presses"
-          ? true
-          : false
-      }
+      style2={categoriesStyle2.includes(findCategory?.slug)}
     >
       <TableauWrapper
         transition={prevlocationValue !== location.pathname}

@@ -7,6 +7,7 @@ import Header from "../Header/Header";
 import Loader from "../Loader/Loader";
 import LocalMessage from "../LocalMessage/LocalMessage";
 import OrderNumberBanner from "../OrderNumberBanner/OrderNumberBanner";
+import Copyright from "../Copyright";
 const Login = lazy(() => import("../../pages/Login/Login"));
 const ProductsPage = lazy(() =>
   import("../../pages/ProductsPage/ProductsPage")
@@ -16,7 +17,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div>
+    <div style={{ margin: "0 0 25px 0" }}>
       <Header />
       <OrderNumberBanner top />
       <LocalMessage />
@@ -46,8 +47,7 @@ const App = () => {
           />
         </Routes>
       </Suspense>
-      {/* <FloatActionButton />
-      <OrderNumberBanner /> */}
+      <Copyright />
     </div>
   );
 };
