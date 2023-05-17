@@ -11,10 +11,12 @@ const ProductElement = ({ product, index, length }) => {
     product;
   const user = useSelector(selectCurrentUser);
 
+  console.log(category);
   return (
     <TableauContent
       visible={user?.role === "isAdmin" || visible}
-      first={category === "today" && index === 0 && length > 1}
+      category={category}
+      last={index === length - 1}
     >
       {user && user.role === "isAdmin" && (
         <AdminButtonBar _id={_id} product={product} />

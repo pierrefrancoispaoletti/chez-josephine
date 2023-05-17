@@ -10,8 +10,10 @@ const FormInput = ({ handleChange, label, ...others }) => {
   return (
     <GroupContainer>
       <FormInputContainer onChange={handleChange} {...others} />
-      {label && (
+      {others.name === "subCategory" && <label htmlFor={label}>{label}</label>}
+      {label && others.name !== "subCategory" && (
         <LabelContainer
+          htmlFor=""
           className={`${
             String(others?.value)?.length ? "shrink" : ""
           } form-input-label`}

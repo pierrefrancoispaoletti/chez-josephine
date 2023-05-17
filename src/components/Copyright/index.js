@@ -2,16 +2,17 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-import "./copyright.css";
+import "./copyright.style.js";
 import {
   faEnvelope,
   faHeart,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { facebook, instagram, phoneNumber, url } from "../../_const";
+import { CopyrightStyled } from "./copyright.style.js";
 const Copyright = () => {
   return (
-    <div className="footer">
+    <CopyrightStyled>
       <div>
         <h3>Retrouvez nous sur : </h3>
       </div>
@@ -38,7 +39,7 @@ const Copyright = () => {
         </a>
       </div>
       <div>
-        <h3 as="h3">Contactez nous ! </h3>
+        <h3>Contactez nous ! </h3>
       </div>
       <div className="footer__icons">
         <a href={`mailto:christophemartinetti@baravin1755.com`}>
@@ -64,16 +65,13 @@ const Copyright = () => {
       </div>
       <div className="footer__copyright" style={{ color: "white" }}>
         {"Copyright © "}
-        <a style={{ color: "white" }} href={url}>
-          <span>Chez Joséphine &nbsp;</span>
+        <a className="link" href={url}>
+          <span>Chez Joséphine&nbsp;</span>
         </a>
         <span>{` ${new Date().getFullYear()}. `}</span>
       </div>
       <div className="footer__alvp">
-        <a
-          style={{ color: "white", fontSize: "1em" }}
-          href="mailto:pef@alvp-developments.com"
-        >
+        <a className="link" href="mailto:pef@alvp-developments.com">
           Made with
           <FontAwesomeIcon
             className="alvp__icon"
@@ -84,7 +82,7 @@ const Copyright = () => {
           by ALVP-Developments Ajaccio
         </a>
       </div>
-    </div>
+    </CopyrightStyled>
   );
 };
 

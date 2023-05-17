@@ -1,11 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LogoIlly from "../../assets/images/logo.png";
-import LogoDomori from "../../assets/images/domori.jpg";
-import LogoDomori2 from "../../assets/images/domori-logo2.png";
-import LogoDamman from "../../assets/images/damman.png";
-import { colors } from "../../_const";
-import { faMugHot } from "@fortawesome/free-solid-svg-icons";
-
 const logoSmall = "20px";
 export const categories = [
   {

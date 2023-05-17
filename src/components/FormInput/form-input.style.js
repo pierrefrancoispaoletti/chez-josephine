@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { colors } from "../../_const";
 
 const mainColor = "black";
 
@@ -18,12 +19,15 @@ export const GroupContainer = styled.div`
   input[type="password"] {
     letter-spacing: 0.3em;
   }
+  input[type="radio"] {
+    transform: scale(1.5);
+    width: 100%;
+  }
 `;
 
 export const FormInputContainer = styled.input`
   width: 100%;
-  background: none;
-  background-color: transparent;
+  background: ${colors.main};
   color: ${mainColor};
   font-size: 18px;
   padding: 10px 10px 10px 5px;

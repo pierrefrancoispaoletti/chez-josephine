@@ -77,6 +77,7 @@ export const AddProductTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 80%;
+  background: ${colors.main};
 `;
 
 export const AddProductButtonStyled = styled.button`

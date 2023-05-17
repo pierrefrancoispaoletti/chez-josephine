@@ -8,10 +8,10 @@ const isStyle2 = (props) => {
       div:not(.modal) {
         background: ${colors.tertiary};
         position: relative;
-        color: ${colors.black};
+        color: ${colors.ecriture};
         font-family: unset;
         .subcategory {
-          color: ${colors.black};
+          color: ${colors.ecriture};
           font-family: unset;
         }
         .chevron {
@@ -34,13 +34,13 @@ const isStyle2 = (props) => {
           color: ${colors.secondary};
         }
         & > .title {
-          color: ${colors.black};
+          color: ${colors.ecriture};
           font-family: unset;
           font-weight: 300;
           font-size: 1.2rem;
           margin: 12px auto;
           & > .price {
-            color: ${colors.black};
+            color: ${colors.ecriture};
             font-family: unset;
             ${"" /* border-bottom: 1px solid ${colors.secondary}; */}
             font-size: 1rem;
@@ -56,7 +56,7 @@ const isStyle2 = (props) => {
           }
         }
         & > .menu {
-          color: ${colors.secondary};
+          color: ${colors.ecriture};
           border: 1px solid ${colors.secondary};
           :not(:first-child) span {
             margin-right: 3px;
@@ -68,7 +68,7 @@ const isStyle2 = (props) => {
         }
       }
       h2 {
-        color: ${colors.secondary};
+        color: ${colors.ecriture};
         font-family: unset;
         font-weight: 200;
       }
@@ -76,8 +76,29 @@ const isStyle2 = (props) => {
   }
 };
 
-const isFirstInHome = (props) => {
-  if (props.first) {
+// const isFirstInHome = (props) => {
+//   if (!props.first) {
+//     return css`
+//       .description {
+//         margin-bottom: 12px !important;
+//         padding-bottom: 12px;
+//         border-bottom: 5px solid ${colors.main};
+//         width: 100%;
+//       }
+//     `;
+//   }
+// };
+const isLastInHome = (props) => {
+  if (props.last && props.category === "today") {
+    return css`
+      .description {
+      }
+    `;
+  }
+  if (
+    !props.last &&
+    (props.category === "today" || props.category === "le-vin")
+  ) {
     return css`
       .description {
         margin-bottom: 12px !important;
@@ -252,7 +273,7 @@ export const TableauContent = styled.div`
     align-items: center;
   }
   ${contentVisible}
-  ${isFirstInHome}
+  ${isLastInHome}
 
   .title {
     width: 100%;
