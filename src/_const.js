@@ -1,4 +1,4 @@
-export const placeLocation = "illy";
+export const placeLocation = "terramanza";
 export let serverURI = "https://young-badlands-89715.herokuapp.com";
 
 export const colors = {
@@ -6,7 +6,7 @@ export const colors = {
   secondary: "#777758", //vert foncé
   tertiary: "#aecd97", // vert clair
   ecriture: "#000000", //black
-  background: "#f4ba9a",
+  background: "#AAC7C0",
   background2: "#ff8080",
 };
 
